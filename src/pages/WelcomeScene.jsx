@@ -4,13 +4,9 @@ function WelcomeScene({ onStart }) {
   const [step, setStep] = useState('start');
   const [name, setName] = useState('');
 
-  const handleNext = () => {
-    if (step === 'start') {
-      setStep('name');
-    } else if (step === 'name' && name.trim()) {
-      if (onStart) {
-        onStart(name.trim());
-      }
+    const handleNext = () => {
+    if (name.trim() !== '') {
+      onStart(name); 
     }
   };
 
