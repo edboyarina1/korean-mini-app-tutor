@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import WelcomeScene from './components/WelcomeScene';
-import IntroScene from './components/IntroScene';
+import WelcomeScene from './pages/WelcomeScene';
+import IntroScene from './pages/IntroScene';
 import './App.css';
 
 function App() {
