@@ -59,8 +59,8 @@ function App() {
       {scene === 'sceneChoice1' && <SceneChoice1 onSelect={handleChoice} />}
       {scene === 'scene2A' && <Scene2A onNext={handleScene3ANext} />}
       {scene === 'scene2B' && <Scene2B onNext={handleScene3BNext} />}
-      {scene === 'scene3A' && <Scene3A onNext={handleEnding} />}
-      {scene === 'scene3B' && <Scene3B onNext={handleEnding} />}
+      {scene === 'scene3A' && <Scene3A name={userName} onNext={handleEnding} />}
+      {scene === 'scene3B' && <Scene3B name={userName} onNext={handleEnding} />}
     </>
   );
 }
