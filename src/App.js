@@ -35,10 +35,15 @@ function App() {
     setScene('intro');
   };
 
+  // Обёртка, которая добавляет name всем сценам
+  const withName = (Component, props = {}) => (
+    <Component {...props} name={userName} />
+  );
+
   return (
     <>
       {scene === 'welcome' && <WelcomeScene onStart={handleStart} />}
-      {scene === 'intro' && <IntroScene name={userName} onNext={goTo('scene1')} />}
+      {scene === 'intro' && withName(IntroScene, { onNext: goTo('scene1') })}
       {scene === 'scene1' && <Scene1 onNext={goTo('scene2')} />}
       {scene === 'scene2' && <Scene2 onNext={goTo('sceneChoice1')} />}
       {scene === 'sceneChoice1' && <SceneChoice1 onSelect={setScene} />}
@@ -46,7 +51,7 @@ function App() {
       {scene === 'scene2B' && <Scene2B onNext={goTo('scene3B')} />}
 
       {/* Ветка 3A */}
-      {scene === 'scene3A' && <Scene3A name={userName} onNext={goTo('sceneChoice3A')} />}
+      {scene === 'scene3A' && withName(Scene3A, { onNext: goTo('sceneChoice3A') })}
       {scene === 'sceneChoice3A' && <SceneChoice3A onSelect={setScene} />}
       {scene === 'scene3A1' && <Scene3A1 onSelect={setScene} />}
       {scene === 'scene4A1A' && <Scene4A1A onNext={goTo('scene5A1A')} />}
@@ -56,12 +61,12 @@ function App() {
       {scene === 'scene3A2' && <Scene3A2 onNext={goTo('scene4A2')} />}
       {scene === 'scene4A2' && <Scene4A2 onSelect={setScene} />}
       {scene === 'scene5A2A' && <Scene5A2A onNext={goTo('scene6A2A')} />}
-      {scene === 'scene6A2A' && <Scene6A2A onNext={goTo('end')} />}
+      {scene === 'scene6A2A' && withName(Scene6A2A, { onNext: goTo('end') })}
       {scene === 'scene5A2B' && <Scene5A2B onNext={goTo('scene6A2B')} />}
-      {scene === 'scene6A2B' && <Scene6A2B onNext={goTo('end')} />}
+      {scene === 'scene6A2B' && withName(Scene6A2B, { onNext: goTo('end') })}
 
       {/* Ветка 3B */}
-      {scene === 'scene3B' && <Scene3B name={userName} onNext={goTo('scene4Btest')} />}
+      {scene === 'scene3B' && withName(Scene3B, { onNext: goTo('scene4Btest') })}
       {scene === 'scene4Btest' && <Scene4Btest onSelect={setScene} />}
       {scene === 'scene4BA' && <Scene4BA onNext={goTo('end')} />}
       {scene === 'scene4BB' && <Scene4BB onNext={goTo('end')} />}
@@ -73,4 +78,3 @@ function App() {
 }
 
 export default App;
-
