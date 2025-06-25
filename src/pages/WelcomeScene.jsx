@@ -6,9 +6,9 @@ function WelcomeScene({ onStart }) {
 
   const handleNext = () => {
     if (step === 'start') {
-      setStep('name');       // <-- Добавляем этот переход
+      setStep('name');
     } else if (step === 'name' && name.trim()) {
-      onStart(name.trim());  // вызываем переход в App
+      onStart(name.trim());
     }
   };
 
@@ -57,4 +57,3 @@ function WelcomeScene({ onStart }) {
 }
 
 export default WelcomeScene;
-
