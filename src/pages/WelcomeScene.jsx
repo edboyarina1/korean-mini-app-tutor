@@ -15,7 +15,7 @@ function WelcomeScene({ onStart }) {
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center bg-gray-100">
       <img
-        src="/заставка.jpg"
+        src="/back.jpg"
         alt="Заставка"
         className="w-full h-full object-cover absolute z-0"
       />
