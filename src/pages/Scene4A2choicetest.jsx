@@ -15,7 +15,7 @@ function SceneChoice4A2({ onSelect }) {
 
   return (
     <SceneType2
-      background="/репетитор2.jpg"
+      background="/2.jpg"
       characterName="Йен Ли"
       text="Which sentence uses the correct collocation?"
       choices={choices}

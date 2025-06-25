@@ -15,7 +15,7 @@ function SceneChoice3A({ onSelect }) {
 
   return (
     <SceneType2
-      background="/библиотека2.jpg"
+      background="/lib2.jpg"
       characterName=""
       text="Может стоит начать занятие пораньше? Так мы успем больше пройти"
       choices={choices}
