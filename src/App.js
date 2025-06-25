@@ -15,10 +15,9 @@ function App() {
   return (
     <>
       {scene === 'welcome' && <WelcomeScene onStart={handleStart} />}
-      {scene === 'intro' && <IntroScene name={ username } />}
+      {scene === 'intro' && <IntroScene name={userName} />}
     </>
   );
 }
 
 export default App;
-
