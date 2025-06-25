@@ -15,7 +15,7 @@ function SceneChoice4B({ onSelect }) {
 
   return (
     <SceneType2
-      background="/репетитор2.jpg"
+      background="/2.jpg"
       characterName="Йен Ли"
       text="Which of the following sentences is grammatically correct and stylistically appropriate in formal writing?"
       choices={choices}
