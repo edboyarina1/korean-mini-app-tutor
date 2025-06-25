@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import WelcomeScene from './pages/WelcomeScene';
 import IntroScene from './pages/IntroScene';
 import Scene1 from './pages/Scene1';
@@ -48,23 +48,13 @@ function App() {
       {/* Ветка 3A */}
       {scene === 'scene3A' && <Scene3A name={userName} onNext={goTo('sceneChoice3A')} />}
       {scene === 'sceneChoice3A' && <SceneChoice3A onSelect={setScene} />}
-      {scene === 'scene3A1' && (
-        <Scene3A1
-          onChoiceA={goTo('scene4A1B')} // Концовка
-          onChoiceB={goTo('scene4A1A')} // → 5A1A → конец
-        />
-      )}
+      {scene === 'scene3A1' && <Scene3A1 onSelect={setScene} />}
       {scene === 'scene4A1A' && <Scene4A1A onNext={goTo('scene5A1A')} />}
       {scene === 'scene5A1A' && <Scene5A1A onNext={goTo('end')} />}
       {scene === 'scene4A1B' && <Scene4A1B onNext={goTo('end')} />}
 
       {scene === 'scene3A2' && <Scene3A2 onNext={goTo('scene4A2')} />}
-      {scene === 'scene4A2' && (
-        <Scene4A2
-          onChoiceA={goTo('scene5A2A')}
-          onChoiceB={goTo('scene5A2B')}
-        />
-      )}
+      {scene === 'scene4A2' && <Scene4A2 onSelect={setScene} />}
       {scene === 'scene5A2A' && <Scene5A2A onNext={goTo('scene6A2A')} />}
       {scene === 'scene6A2A' && <Scene6A2A onNext={goTo('end')} />}
       {scene === 'scene5A2B' && <Scene5A2B onNext={goTo('scene6A2B')} />}
@@ -72,12 +62,7 @@ function App() {
 
       {/* Ветка 3B */}
       {scene === 'scene3B' && <Scene3B name={userName} onNext={goTo('scene4Btest')} />}
-      {scene === 'scene4Btest' && (
-        <Scene4Btest
-          onChoiceA={goTo('scene4BA')} // Конец
-          onChoiceB={goTo('scene4BB')} // Конец
-        />
-      )}
+      {scene === 'scene4Btest' && <Scene4Btest onSelect={setScene} />}
       {scene === 'scene4BA' && <Scene4BA onNext={goTo('end')} />}
       {scene === 'scene4BB' && <Scene4BB onNext={goTo('end')} />}
 
