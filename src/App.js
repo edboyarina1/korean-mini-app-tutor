@@ -72,7 +72,7 @@ function App() {
       {scene === 'scene4BB' && <Scene4BB onNext={goTo('end')} />}
 
       {/* Финал */}
-      {scene === 'end' && <div className="ending">Это конец демо!</div>}
+      {scene === 'end' && <div className="ending">Это конец демо! Напишите пожалуйста обратную связь в тг @edboyarina </div>}
     </>
   );
 }
